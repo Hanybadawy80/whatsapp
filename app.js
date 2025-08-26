@@ -10,7 +10,7 @@ const verifyToken = process.env.VERIFY_TOKEN || ''; // for GET verification
 const FSOAR_WEBHOOK_URL =
   process.env.FSOAR_WEBHOOK_URL ||
   'https://ativ4jeppvogma5u4x7.eu-central-1.fortisoar.forticloud.com:443/api/triggers/1/whatsapp';
-const FSOAR_TOKEN = process.env.FSOAR_TOKEN || 'da161494ec7d984f2b1f1f3e068be4bdf091bc512f2b85aec3757966f8de6313';
+const FSOAR_TOKEN = process.env.FSOAR_TOKEN || "da161494ec7d984f2b1f1f3e068be4bdf091bc512f2b85aec3757966f8de6313";
 const FSOAR_TIMEOUT_MS = Number(process.env.FSOAR_TIMEOUT_MS || 5000);
 const FSOAR_MAX_RETRIES = Number(process.env.FSOAR_MAX_RETRIES || 3);
 
