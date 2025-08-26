@@ -66,7 +66,7 @@ app.get("/deletion", (_req, res) => {
     <!doctype html><html><head><meta charset="utf-8"><title>Data Deletion</title></head>
     <body style="font-family:sans-serif">
       <h2>User Data Deletion</h2>
-      <p>Contact <a href="mailto:hany@hbforty.com">hany@hbforty.com</a>
+      <p>Contact <a href="mailto:support@example.com">support@example.com</a>
          or POST to <code>/delete-request</code>.</p>
     </body></html>
   `);
