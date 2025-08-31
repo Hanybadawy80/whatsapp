@@ -1,6 +1,4 @@
 import streamlit as st
-import qrcode
-from io import BytesIO
 
 # Page setup
 st.set_page_config(page_title="Message Scanning Project", page_icon="📩", layout="centered")
@@ -24,19 +22,12 @@ Our solution can:
 whatsapp_number = "+15551540430"
 wa_link = f"https://wa.me/{whatsapp_number[1:]}"  # remove "+" for wa.me format
 
-st.markdown(
-    f"""
-    ---
-    ### 📞 Contact Us  
-    👉 [Chat with us on WhatsApp]({wa_link})
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("---")
+st.subheader("📞 Contact Us")
 
-# Generate QR code for WhatsApp link
-qr = qrcode.make(wa_link)
-buf = BytesIO()
-qr.save(buf, format="PNG")
+# WhatsApp button
+st.markdown(f"👉 [Chat with us on WhatsApp]({wa_link})")
 
-st.markdown("#### Or scan this QR code:")
-st.image(buf.getvalue(), caption="Scan to open WhatsApp", use_column_width=False)
+# QR code (from free API, no extra library needed)
+qr_url = f"https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={wa_link}"
+st.image(qr_url, caption="Scan this QR to open WhatsApp", use_column_width=False)
