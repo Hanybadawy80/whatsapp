@@ -1,4 +1,6 @@
 import streamlit as st
+import qrcode
+from io import BytesIO
 
 # Page setup
 st.set_page_config(page_title="Message Scanning Project", page_icon="📩", layout="centered")
@@ -26,8 +28,15 @@ st.markdown(
     f"""
     ---
     ### 📞 Contact Us  
-    Have questions or want a demo?  
     👉 [Chat with us on WhatsApp]({wa_link})
     """,
     unsafe_allow_html=True
 )
+
+# Generate QR code for WhatsApp link
+qr = qrcode.make(wa_link)
+buf = BytesIO()
+qr.save(buf, format="PNG")
+
+st.markdown("#### Or scan this QR code:")
+st.image(buf.getvalue(), caption="Scan to open WhatsApp", use_column_width=False)
