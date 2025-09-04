@@ -18,8 +18,8 @@ Our solution can:
 - 📊 Provide reports and dashboards for visibility  
 """)
 
-# WhatsApp link
-whatsapp_number = "+15551540430"
+# WhatsApp link (updated number)
+whatsapp_number = "+971506202304"
 wa_link = f"https://wa.me/{whatsapp_number[1:]}"  # remove "+" for wa.me format
 
 st.markdown("---")
